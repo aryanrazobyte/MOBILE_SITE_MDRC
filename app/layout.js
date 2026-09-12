@@ -78,7 +78,7 @@ const jsonLd = {
   name: "Modern Diagnostic & Research Centre",
   url: SITE_URL,
   image: `${SITE_URL}/images/heroSectionImage.png`,
-  telephone: "+91-124-6712000",
+  telephone: "+91-8920300300",
   medicalSpecialty: "Diagnostic Radiology",
   areaServed: "Gurugram",
   address: [

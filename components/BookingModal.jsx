@@ -36,18 +36,36 @@ export default function BookingModal() {
 
   const update = (event) => {
     const { name, value } = event.target;
+    if (name === "phone") {
+      const digits = value.replace(/\D/g, "").slice(0, 10);
+      setForm((current) => ({ ...current, [name]: digits }));
+      return;
+    }
     setForm((current) => ({ ...current, [name]: value }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const trimmedName = form.name.trim();
+    const cleanPhone = form.phone.replace(/\D/g, "");
+
+    if (!trimmedName) {
+      alert("Please enter your full name.");
+      return;
+    }
+
+    if (cleanPhone.length !== 10) {
+      alert("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
     const text = [
       "Scan Booking Request",
-      `Name: ${form.name}`,
-      `Phone: ${form.phone}`,
-      form.email ? `Email: ${form.email}` : null,
+      `Name: ${trimmedName}`,
+      `Phone: ${cleanPhone}`,
+      form.email ? `Email: ${form.email.trim()}` : null,
       `Scan: ${form.scan}`,
-      form.message ? `Message: ${form.message}` : null,
+      form.message ? `Message: ${form.message.trim()}` : null,
     ]
       .filter(Boolean)
       .join("\n");
@@ -95,7 +113,9 @@ export default function BookingModal() {
             </p>
             <form className="booking-form" onSubmit={handleSubmit}>
               <label>
-                Full name
+                <span>
+                  Full name <span style={{ color: "#dc2626", fontWeight: "700" }}>*</span>
+                </span>
                 <input
                   name="name"
                   value={form.name}
@@ -106,15 +126,20 @@ export default function BookingModal() {
                 />
               </label>
               <label>
-                Phone number
+                <span>
+                  Phone number <span style={{ color: "#dc2626", fontWeight: "700" }}>*</span>
+                </span>
                 <input
                   name="phone"
                   type="tel"
-                  inputMode="tel"
+                  inputMode="numeric"
+                  pattern="[0-9]{10}"
+                  maxLength={10}
                   value={form.phone}
                   onChange={update}
-                  placeholder="e.g. 9876543210"
+                  placeholder="10-digit mobile number"
                   required
+                  title="Please enter a valid 10-digit mobile number"
                   autoComplete="tel"
                 />
               </label>

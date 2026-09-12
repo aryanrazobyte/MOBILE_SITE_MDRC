@@ -7,6 +7,7 @@ import {
   features,
   locations,
   mriScans,
+  PHONE,
   PHONE_HREF,
   preparationSteps,
   services,
@@ -136,10 +137,6 @@ export default function LandingPage() {
         <section className="hero">
           <div className="container hero-grid">
             <div className="hero-content">
-              <div className="hero-eyebrow-badge">
-                <span className="badge-pulse"></span>
-                <span>NABL &amp; NABH Accredited Labs</span>
-              </div>
               <h1>
                 Advanced MRI Scan <span>in Gurugram</span>
               </h1>
@@ -152,7 +149,7 @@ export default function LandingPage() {
                 </button>
                 <a href={PHONE_HREF} className="hero-call-btn">
                   <img src="/images/call.png" alt="" />
-                  <span>Call 0124 671 2000</span>
+                  <span>Call {PHONE}</span>
                 </a>
               </div>
               <div className="hero-trust">
