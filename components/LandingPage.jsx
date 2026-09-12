@@ -138,7 +138,7 @@ export default function LandingPage() {
             <div className="hero-content">
               <div className="hero-eyebrow-badge">
                 <span className="badge-pulse"></span>
-                <span>NABL &amp; NABH Accredited Centre</span>
+                <span>NABL &amp; NABH Accredited Labs</span>
               </div>
               <h1>
                 Advanced MRI Scan <span>in Gurugram</span>
