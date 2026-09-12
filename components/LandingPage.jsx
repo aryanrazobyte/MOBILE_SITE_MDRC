@@ -378,12 +378,49 @@ export default function LandingPage() {
               {locations.map((location) => (
                 <article className="location-card" key={location.label}>
                   <div className="location-image">
-                    <img src={location.image} alt={location.title} />
+                    <img
+                      src={location.image}
+                      alt={location.title}
+                      style={{ objectPosition: location.imagePosition || "center center" }}
+                    />
+                    {location.badge && (
+                      <span className="location-img-badge">{location.badge}</span>
+                    )}
                   </div>
                   <div className="location-content">
-                    <span className="location-label">{location.label}</span>
+                    <div className="location-meta-row">
+                      <span className="location-label">{location.label}</span>
+                      <span className="location-status">
+                        <span className="status-dot"></span>
+                        Open Today
+                      </span>
+                    </div>
                     <h3>{location.title}</h3>
-                    <address>{location.address}</address>
+                    <address className="location-address">
+                      <svg className="location-pin-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                        <circle cx="12" cy="9" r="2.5" />
+                      </svg>
+                      <span>{location.address}</span>
+                    </address>
+                    {location.timing && (
+                      <div className="location-timing">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="10" />
+                          <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <span>{location.timing}</span>
+                      </div>
+                    )}
+                    {location.tags && (
+                      <div className="location-tags">
+                        {location.tags.map((tag) => (
+                          <span key={tag} className="location-tag">
+                            ✓ {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                     <div className="location-card-actions">
                       <a href={PHONE_HREF} className="location-action-call">
                         <img src="/images/call.png" alt="" />
