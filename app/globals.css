@@ -177,6 +177,7 @@ h1, h2, h3, h4 {
 .header-whatsapp img {
   width: 18px;
   height: 18px;
+  filter: invert(42%) sepia(86%) saturate(464%) hue-rotate(93deg) brightness(94%) contrast(91%);
 }
 
 /* ==========================================================================
@@ -1640,13 +1641,7 @@ h1, h2, h3, h4 {
   .sticky-whatsapp img {
     width: 17px;
     height: 17px;
-  }
-
-  .sticky-book {
-    flex: 1.4;
-    background: linear-gradient(135deg, #0879b8 0%, #05618f 100%);
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(8, 121, 184, 0.32);
+    filter: invert(42%) sepia(86%) saturate(464%) hue-rotate(93deg) brightness(94%) contrast(91%);
   }
 }
 

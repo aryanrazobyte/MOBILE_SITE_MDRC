@@ -515,9 +515,6 @@ export default function LandingPage() {
           <img src="/images/whatsapp.png" alt="" />
           <span>WhatsApp</span>
         </a>
-        <button type="button" className="sticky-btn sticky-book" onClick={() => openBooking("MRI")} aria-label="Book MRI Scan Appointment">
-          <span>Book Scan</span>
-        </button>
       </nav>
     </>
   );
