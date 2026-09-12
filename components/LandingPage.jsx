@@ -501,7 +501,7 @@ export default function LandingPage() {
             <a className="footer-link" href={`${SITE_URL}/page/privacy-policy`} target="_blank" rel="noopener noreferrer">
               Privacy Policy
             </a>
-            <p>©2024 All right reserved. Modern Diagnostic & Research Centre Limited.</p>
+            <p>©2026 All right reserved. Modern Diagnostic & Research Centre Limited.</p>
           </div>
         </div>
       </footer>
