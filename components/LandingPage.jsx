@@ -7,7 +7,7 @@ import {
   features,
   locations,
   mriScans,
-  PHONE,
+  PHONE_DISPLAY,
   PHONE_HREF,
   preparationSteps,
   services,
@@ -15,21 +15,6 @@ import {
   WHATSAPP_HREF,
 } from "../lib/site";
 import { useBooking } from "./BookingContext";
-
-function ContactButtons() {
-  return (
-    <>
-      <a href={PHONE_HREF} className="header-call">
-        <img src="/images/call.png" alt="" />
-        <span>Call Now</span>
-      </a>
-      <a href={WHATSAPP_HREF} className="header-whatsapp" target="_blank" rel="noopener noreferrer">
-        <img src="/images/whatsapp.png" alt="" />
-        <span>WhatsApp</span>
-      </a>
-    </>
-  );
-}
 
 export default function LandingPage() {
   const { openBooking } = useBooking();
@@ -126,6 +111,10 @@ export default function LandingPage() {
             <img src="/images/mdrc-logo.png" alt="Modern Diagnostic & Research Centre" />
           </a>
           <div className="header-actions">
+            <a href={PHONE_HREF} className="header-call header-call-desktop">
+              <img src="/images/call.png" alt="" />
+              <span>Call {PHONE_DISPLAY}</span>
+            </a>
             <button type="button" className="btn-book" onClick={() => openBooking("MRI")}>
               Book Now
             </button>
@@ -149,7 +138,7 @@ export default function LandingPage() {
                 </button>
                 <a href={PHONE_HREF} className="hero-call-btn">
                   <img src="/images/call.png" alt="" />
-                  <span>Call {PHONE}</span>
+                  <span>Call {PHONE_DISPLAY}</span>
                 </a>
               </div>
               <div className="hero-trust">
@@ -167,8 +156,8 @@ export default function LandingPage() {
             <div className="hero-visual">
               <div className="hero-image-wrapper">
                 <img
-                  src="/images/heroSectionImage.png"
-                  alt="Advanced 3T MRI scanner at MDRC Gurugram"
+                  src="/images/3t-mri-machine.jpg"
+                  alt="3T MRI Machine at MDRC Gurugram"
                   width="700"
                   height="600"
                   priority="true"
@@ -233,7 +222,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="intro-visual">
-              <img src="/images/indian-mri-scan.jpg" alt="Indian patient undergoing an MRI scan at MDRC" />
+              <img src="/images/mri-patient-scan.jpg" alt="Patient undergoing an MRI scan at MDRC" />
             </div>
           </div>
         </section>
@@ -462,7 +451,7 @@ export default function LandingPage() {
         <section className="section section-dark">
           <div className="container trust-image-grid">
             <div className="trust-image-wrapper">
-              <img src="/images/PatientTrust.jpeg" alt="Patient receiving diagnostic imaging care at MDRC" />
+              <img src="/images/patient-trust.jpg" alt="Patient receiving diagnostic imaging care at MDRC" />
             </div>
             <div className="trust-content">
               <span className="eyebrow eyebrow-light">PATIENT EXPERIENCE</span>
@@ -518,7 +507,6 @@ export default function LandingPage() {
               <button type="button" className="btn-book btn-white-book" onClick={() => openBooking("MRI")}>
                 Book Now
               </button>
-              <ContactButtons />
             </div>
           </div>
         </section>
@@ -535,7 +523,7 @@ export default function LandingPage() {
             <a className="footer-link" href={`${SITE_URL}/page/privacy-policy`} target="_blank" rel="noopener noreferrer">
               Privacy Policy
             </a>
-            <p>©2026 All right reserved. Modern Diagnostic & Research Centre Limited.</p>
+            <p>© 2026, All rights reserved. Modern Diagnostic & Research Centre Limited.</p>
           </div>
         </div>
       </footer>

@@ -114,7 +114,7 @@ export default function BookingModal() {
             <form className="booking-form" onSubmit={handleSubmit}>
               <label>
                 <span>
-                  Full name <span style={{ color: "#dc2626", fontWeight: "700" }}>*</span>
+                  Full Name <span style={{ color: "#dc2626", fontWeight: "700" }}>*</span>
                 </span>
                 <input
                   name="name"
@@ -127,7 +127,7 @@ export default function BookingModal() {
               </label>
               <label>
                 <span>
-                  Phone number <span style={{ color: "#dc2626", fontWeight: "700" }}>*</span>
+                  Phone Number <span style={{ color: "#dc2626", fontWeight: "700" }}>*</span>
                 </span>
                 <input
                   name="phone"
@@ -144,7 +144,7 @@ export default function BookingModal() {
                 />
               </label>
               <label>
-                Email (optional)
+                Email (Optional)
                 <input
                   name="email"
                   type="email"
@@ -156,7 +156,7 @@ export default function BookingModal() {
                 />
               </label>
               <label>
-                Scan type
+                Scan Type
                 <select name="scan" value={form.scan} onChange={update}>
                   {SCAN_TYPES.map((type) => (
                     <option key={type}>{type}</option>
@@ -164,7 +164,7 @@ export default function BookingModal() {
                 </select>
               </label>
               <label className="booking-full">
-                Message (optional)
+                Message (Optional)
                 <textarea
                   name="message"
                   rows="3"
@@ -174,7 +174,7 @@ export default function BookingModal() {
                 />
               </label>
               <button type="submit" className="btn-book booking-submit">
-                Submit request
+                Submit Request
               </button>
             </form>
           </>

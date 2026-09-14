@@ -23,7 +23,7 @@ export const metadata = {
     "MDRC",
     "MRI Gurgaon",
     "PET-CT",
-    "CBCT",
+    "CT Scan",
     "diagnostic centre Sector 40",
   ],
   authors: [{ name: "Modern Diagnostic & Research Centre" }],
@@ -39,7 +39,7 @@ export const metadata = {
     description: DESCRIPTION,
     images: [
       {
-        url: "/images/heroSectionImage.png",
+        url: "/images/3t-mri-machine.jpg",
         width: 1200,
         height: 630,
         alt: "Advanced MRI Scan in Gurugram at MDRC",
@@ -50,7 +50,7 @@ export const metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/images/heroSectionImage.png"],
+    images: ["/images/3t-mri-machine.jpg"],
   },
   robots: {
     index: true,
@@ -77,7 +77,7 @@ const jsonLd = {
   "@type": "MedicalClinic",
   name: "Modern Diagnostic & Research Centre",
   url: SITE_URL,
-  image: `${SITE_URL}/images/heroSectionImage.png`,
+  image: `${SITE_URL}/images/3t-mri-machine.jpg`,
   telephone: "+91-8920300300",
   medicalSpecialty: "Diagnostic Radiology",
   areaServed: "Gurugram",
