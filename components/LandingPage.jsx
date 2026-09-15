@@ -111,10 +111,6 @@ export default function LandingPage() {
             <img src="/images/mdrc-logo.png" alt="Modern Diagnostic & Research Centre" />
           </a>
           <div className="header-actions">
-            <a href={PHONE_HREF} className="header-call header-call-desktop">
-              <img src="/images/call.png" alt="" />
-              <span>Call {PHONE_DISPLAY}</span>
-            </a>
             <button type="button" className="btn-book" onClick={() => openBooking("MRI")}>
               Book Now
             </button>
@@ -138,7 +134,7 @@ export default function LandingPage() {
                 </button>
                 <a href={PHONE_HREF} className="hero-call-btn">
                   <img src="/images/call.png" alt="" />
-                  <span>Call {PHONE_DISPLAY}</span>
+                  <span>{PHONE_DISPLAY}</span>
                 </a>
               </div>
               <div className="hero-trust">
@@ -531,7 +527,7 @@ export default function LandingPage() {
       <nav className="mobile-sticky-cta" aria-label="Quick contact actions">
         <a href={PHONE_HREF} className="sticky-btn sticky-call" aria-label="Call MDRC">
           <img src="/images/call.png" alt="" />
-          <span>Call</span>
+          <span>{PHONE_DISPLAY}</span>
         </a>
         <a href={WHATSAPP_HREF} className="sticky-btn sticky-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp MDRC">
           <img src="/images/whatsapp.png" alt="" />

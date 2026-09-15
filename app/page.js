@@ -5,8 +5,10 @@ import LandingPage from "../components/LandingPage";
 export default function HomePage() {
   return (
     <BookingProvider>
-      <LandingPage />
-      <BookingModal />
+      <div className="app-shell">
+        <LandingPage />
+        <BookingModal />
+      </div>
     </BookingProvider>
   );
 }
