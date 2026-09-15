@@ -108,7 +108,7 @@ export default function LandingPage() {
       <header className="site-header">
         <div className="container header-inner">
           <a href={SITE_URL} className="logo" aria-label="Modern Diagnostic & Research Centre">
-            <img src="/images/mdrc-logo.png" alt="Modern Diagnostic & Research Centre" />
+            <img src="/images/mdrc-logo.png?v=2" alt="Modern Diagnostic & Research Centre" />
           </a>
           <div className="header-actions">
             <button type="button" className="btn-book" onClick={() => openBooking("MRI")}>
@@ -512,7 +512,7 @@ export default function LandingPage() {
         <div className="container footer-inner">
           <div className="footer-logo">
             <a href={SITE_URL} className="logo">
-              <img src="/images/mdrc-logo.png" alt="Modern Diagnostic & Research Centre" />
+              <img src="/images/mdrc-logo.png?v=2" alt="Modern Diagnostic & Research Centre" />
             </a>
           </div>
           <div className="footer-meta">
