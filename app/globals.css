@@ -1510,7 +1510,7 @@ h1, h2, h3, h4 {
 }
 
 /* CRITICAL for mobile: font-size >= 16px prevents iOS Safari auto-zoom! */
-.booking-form input,
+.booking-form input:not([type="checkbox"]),
 .booking-form select,
 .booking-form textarea {
   width: 100%;
@@ -1523,7 +1523,7 @@ h1, h2, h3, h4 {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.booking-form input:focus,
+.booking-form input:not([type="checkbox"]):focus,
 .booking-form select:focus,
 .booking-form textarea:focus {
   outline: none;
@@ -1538,6 +1538,79 @@ h1, h2, h3, h4 {
 .booking-full,
 .booking-submit {
   grid-column: 1 / -1;
+}
+
+.booking-form label.booking-terms {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.booking-form label.booking-terms input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+.booking-terms-box {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(8, 121, 184, 0.45);
+  border-radius: 4px;
+  background: #ffffff;
+  position: relative;
+  transition: var(--transition);
+}
+
+.booking-form label.booking-terms input:checked + .booking-terms-box {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(8, 121, 184, 0.28);
+}
+
+.booking-form label.booking-terms input:checked + .booking-terms-box::after {
+  content: "";
+  position: absolute;
+  left: 4.5px;
+  top: 0.5px;
+  width: 4.5px;
+  height: 9px;
+  border: solid #ffffff;
+  border-width: 0 2.2px 2.2px 0;
+  transform: rotate(45deg);
+}
+
+.booking-form label.booking-terms input:focus-visible + .booking-terms-box {
+  box-shadow: 0 0 0 3px rgba(8, 121, 184, 0.2);
+}
+
+.booking-terms-text {
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.booking-terms-text a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .booking-submit {

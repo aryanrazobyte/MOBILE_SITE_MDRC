@@ -388,15 +388,6 @@ export default function LandingPage() {
                       </svg>
                       <span>{location.address}</span>
                     </address>
-                    {location.timing && (
-                      <div className="location-timing">
-                        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="12" cy="12" r="10" />
-                          <polyline points="12 6 12 12 16 14" />
-                        </svg>
-                        <span>{location.timing}</span>
-                      </div>
-                    )}
                     {location.tags && (
                       <div className="location-tags">
                         {location.tags.map((tag) => (
@@ -406,15 +397,6 @@ export default function LandingPage() {
                         ))}
                       </div>
                     )}
-                    <div className="location-card-actions">
-                      <a href={PHONE_HREF} className="location-action-call">
-                        <img src="/images/call.png" alt="" />
-                        <span>Call Centre</span>
-                      </a>
-                      <button type="button" className="location-action-book" onClick={() => openBooking("MRI")}>
-                        Book at this Lab
-                      </button>
-                    </div>
                   </div>
                 </article>
               ))}

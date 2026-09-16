@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ANDROID_APP, IOS_APP, SCAN_TYPES, WHATSAPP_HREF } from "../lib/site";
+import { ANDROID_APP, IOS_APP, SCAN_TYPES, SITE_URL, WHATSAPP_HREF } from "../lib/site";
 import { useBooking } from "./BookingContext";
 
 const emptyForm = {
@@ -10,6 +10,7 @@ const emptyForm = {
   email: "",
   scan: "MRI",
   message: "",
+  acceptedTerms: true,
 };
 
 export default function BookingModal() {
@@ -35,7 +36,11 @@ export default function BookingModal() {
   if (!open) return null;
 
   const update = (event) => {
-    const { name, value } = event.target;
+    const { name, value, type, checked } = event.target;
+    if (type === "checkbox") {
+      setForm((current) => ({ ...current, [name]: checked }));
+      return;
+    }
     if (name === "phone") {
       const digits = value.replace(/\D/g, "").slice(0, 10);
       setForm((current) => ({ ...current, [name]: digits }));
@@ -56,6 +61,11 @@ export default function BookingModal() {
 
     if (cleanPhone.length !== 10) {
       alert("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    if (!form.acceptedTerms) {
+      alert("Please accept the Terms & Conditions to continue.");
       return;
     }
 
@@ -172,6 +182,26 @@ export default function BookingModal() {
                   onChange={update}
                   placeholder="Any specific instructions or doctor's prescription details..."
                 />
+              </label>
+              <label className="booking-terms booking-full">
+                <input
+                  type="checkbox"
+                  name="acceptedTerms"
+                  checked={form.acceptedTerms}
+                  onChange={update}
+                />
+                <span className="booking-terms-box" aria-hidden="true" />
+                <span className="booking-terms-text">
+                  I agree to the{" "}
+                  <a
+                    href={`${SITE_URL}/page/privacy-policy`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(event) => event.stopPropagation()}
+                  >
+                    Terms &amp; Conditions
+                  </a>
+                </span>
               </label>
               <button type="submit" className="btn-book booking-submit">
                 Submit Request
