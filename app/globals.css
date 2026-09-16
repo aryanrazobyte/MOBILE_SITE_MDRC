@@ -920,20 +920,17 @@ h1, h2, h3, h4 {
 
 .location-image {
   position: relative;
-  height: 200px;
-  min-height: 200px;
   width: 100%;
   background: #eef8fc;
   overflow: hidden;
 }
 
 .location-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center center;
   transition: transform 0.45s ease;
 }
 
