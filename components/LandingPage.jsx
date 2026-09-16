@@ -108,7 +108,7 @@ export default function LandingPage() {
       <header className="site-header">
         <div className="container header-inner">
           <a href={SITE_URL} className="logo" aria-label="Modern Diagnostic & Research Centre">
-            <img src="/images/mdrc-logo.png?v=2" alt="Modern Diagnostic & Research Centre" />
+            <img src="/images/modern-diagnostic-research-centre-logo.png" alt="Modern Diagnostic & Research Centre" />
           </a>
           <div className="header-actions">
             <button type="button" className="btn-book" onClick={() => openBooking("MRI")}>
@@ -133,7 +133,7 @@ export default function LandingPage() {
                   Book Scan Now
                 </button>
                 <a href={PHONE_HREF} className="hero-call-btn">
-                  <img src="/images/call.png" alt="" />
+                  <img src="/images/phone-call-icon.png" alt="" />
                   <span>{PHONE_DISPLAY}</span>
                 </a>
               </div>
@@ -152,7 +152,7 @@ export default function LandingPage() {
             <div className="hero-visual">
               <div className="hero-image-wrapper">
                 <img
-                  src="/images/3t-mri-machine.jpg"
+                  src="/images/siemens-3t-mri-machine-gurugram.jpg"
                   alt="3T MRI Machine at MDRC Gurugram"
                   width="700"
                   height="600"
@@ -202,7 +202,7 @@ export default function LandingPage() {
                   Get access to advanced MRI scanning in Gurugram with high-quality imaging and accurate diagnostic support. MRI uses powerful magnetic fields and radio waves to create detailed images of organs, tissues, joints, and other structures inside the body.
                 </p>
                 <p>
-                  At MDRC, every scan is performed in a calm, patient-friendly setting and reported by experienced radiologists. Whether your doctor has advised a brain, spine, joint, abdomen, or vascular study, 3T MRI helps deliver clear answers without ionizing radiation—so treatment decisions can be made with confidence.
+                  At MDRC, every scan is performed in a calm, patient-friendly setting and reported by experienced radiologists. Whether your doctor has advised a brain, spine, joint, abdomen, or vascular study, Our SkyraFit 3T MRI has wide bore (70 Cm) gantry, which is less claustrophobic for patients. It can take comfortably take obese patients. Its 64 channels deliver high resolution images for clear answers, so that treatment decisions are made with confidence. MRI does not use any ionising radiations.
                 </p>
                 <div className="content-points">
                   <div className="content-point">
@@ -218,7 +218,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="intro-visual">
-              <img src="/images/mri-patient-scan.jpg" alt="Patient undergoing an MRI scan at MDRC" />
+              <img src="/images/patient-undergoing-mri-scan.jpg" alt="Patient undergoing an MRI scan at MDRC" />
             </div>
           </div>
         </section>
@@ -429,7 +429,7 @@ export default function LandingPage() {
         <section className="section section-dark">
           <div className="container trust-image-grid">
             <div className="trust-image-wrapper">
-              <img src="/images/patient-trust.jpg" alt="Patient receiving diagnostic imaging care at MDRC" />
+              <img src="/images/patient-diagnostic-imaging-care.jpg" alt="Patient receiving diagnostic imaging care at MDRC" />
             </div>
             <div className="trust-content">
               <span className="eyebrow eyebrow-light">PATIENT EXPERIENCE</span>
@@ -494,7 +494,7 @@ export default function LandingPage() {
         <div className="container footer-inner">
           <div className="footer-logo">
             <a href={SITE_URL} className="logo">
-              <img src="/images/mdrc-logo.png?v=2" alt="Modern Diagnostic & Research Centre" />
+              <img src="/images/modern-diagnostic-research-centre-logo.png" alt="Modern Diagnostic & Research Centre" />
             </a>
           </div>
           <div className="footer-meta">
@@ -508,11 +508,11 @@ export default function LandingPage() {
 
       <nav className="mobile-sticky-cta" aria-label="Quick contact actions">
         <a href={PHONE_HREF} className="sticky-btn sticky-call" aria-label="Call MDRC">
-          <img src="/images/call.png" alt="" />
+          <img src="/images/phone-call-icon.png" alt="" />
           <span>{PHONE_DISPLAY}</span>
         </a>
         <a href={WHATSAPP_HREF} className="sticky-btn sticky-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp MDRC">
-          <img src="/images/whatsapp.png" alt="" />
+          <img src="/images/whatsapp-icon.png" alt="" />
           <span>WhatsApp</span>
         </a>
       </nav>

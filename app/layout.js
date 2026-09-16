@@ -39,7 +39,7 @@ export const metadata = {
     description: DESCRIPTION,
     images: [
       {
-        url: "/images/3t-mri-machine.jpg",
+        url: "/images/siemens-3t-mri-machine-gurugram.jpg",
         width: 1200,
         height: 630,
         alt: "Advanced MRI Scan in Gurugram at MDRC",
@@ -50,7 +50,7 @@ export const metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/images/3t-mri-machine.jpg"],
+    images: ["/images/siemens-3t-mri-machine-gurugram.jpg"],
   },
   robots: {
     index: true,
@@ -64,11 +64,11 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/favicon.png", type: "image/png" },
+      { url: "/images/mdrc-favicon.png", type: "image/png" },
       { url: "/favicon.ico" },
     ],
-    shortcut: "/images/favicon.png",
-    apple: "/images/favicon.png",
+    shortcut: "/images/mdrc-favicon.png",
+    apple: "/images/mdrc-favicon.png",
   },
 };
 
@@ -77,7 +77,7 @@ const jsonLd = {
   "@type": "MedicalClinic",
   name: "Modern Diagnostic & Research Centre",
   url: SITE_URL,
-  image: `${SITE_URL}/images/3t-mri-machine.jpg`,
+  image: `${SITE_URL}/images/siemens-3t-mri-machine-gurugram.jpg`,
   telephone: "+91-8920300300",
   medicalSpecialty: "Diagnostic Radiology",
   areaServed: "Gurugram",
@@ -105,9 +105,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="/images/favicon.png" />
-        <link rel="shortcut icon" href="/images/favicon.png" />
-        <link rel="apple-touch-icon" href="/images/favicon.png" />
+        <link rel="icon" type="image/png" href="/images/mdrc-favicon.png" />
+        <link rel="shortcut icon" href="/images/mdrc-favicon.png" />
+        <link rel="apple-touch-icon" href="/images/mdrc-favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
